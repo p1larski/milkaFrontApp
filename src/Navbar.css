@@ -1,0 +1,93 @@
+   @font-face {
+    font-family: 'Corinthia';
+    src: local('Corinthia'), url(./fonts/Corinthia/Corinthia-Regular.ttf) format('truetype');
+    font-size: 22;
+  }
+  
+  .viewDisplay {
+    font-size: 40px;
+    font-family: Corinthia;
+  }
+   
+  .Navbar {
+    width: 100%;
+    height: 100%;
+    font-family: Corinthia;
+    align-items: flex-start;
+    background: url(./images/WelcomePhoto.jpg);  
+    background-position: center;   
+    background-repeat: no-repeat;
+    background-position-y: 0.45cm;
+  }
+
+  .Navfoto{
+    height: 700px;
+  }
+  .Title{
+    font-size: 60px;
+    font-weight: bold;
+    color:#639;
+  }
+  .Navbar .leftSide {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+  .ButtonComp{
+    background-color: rgb(183, 178, 185);
+    border: none;
+    color:#639;
+    font-size: 60px;
+}
+  @media only screen and (max-width: 850px) {
+    .Navbar .leftSide .links a {
+      font-size: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .Navbar .leftSide .links a {
+      font-size: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+
+    .Navbar .leftSide .ButtonComp button{
+      display: none;
+    }
+    .Navbar .leftSide .links {
+      display: none;
+      font-size: 40px;
+    }
+  
+    .Navbar .leftSide #hidden {
+      position: absolute;
+      left: 0px;
+      top: 57px;
+      height: 160px;
+      max-height: 200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Navbar .leftSide #hidden a {
+      font-size: 45px;
+      color: crimson;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(229, 218, 233);
+  }

@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import React from "react";
+import Navbar from './components/Navbar';
+import Employee from './components/Calendar';
 import './App.css';
+import Contact from './components/Contact';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './components/Layout';
+import Gallery from './components/Gallery';
 
-function App() {
+export default function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='Global'> 
+                <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<Navbar />} />
+          <Route path="hairdressing" element={<Gallery/>} />
+          <Route path="calendar" element={<Employee />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+      {/* <div className='SecondPage'>
+                <Employee/>
+      </div> 
+      <div>
+                <Contact/>
+      </div>
+      <div className='ButtonTop'>
+                <Button/>
+      </div> */}
+      
     </div>
-  );
-}
-
-export default App;
+  )
+};
+ 

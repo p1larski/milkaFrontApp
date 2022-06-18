@@ -1,38 +1,25 @@
-.App {
+body{
+  background-color: rgb(236, 226, 240);
+}
+.Global{
+  font-size: 40px;
+  font-family: Corinthia;
   text-align: center;
+  width: auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Welcome {
+  height: 999px;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.SecondPage{
+	position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Link{
+  color: #639;
+  text-decoration: none;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'Corinthia';
+  src: local('Corinthia'), url(./fonts/Corinthia/Corinthia-Regular.ttf) format('truetype');
+  font-size: 22;
 }

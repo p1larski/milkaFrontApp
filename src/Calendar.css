@@ -1,0 +1,211 @@
+.calendar {
+  position: relative;
+  width: auto;
+  display: block;
+  border: #777;
+}
+
+.grid-container {
+  position: relative;
+  align-items: center;
+  margin-left: 3%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  background-color: rgb(236, 226, 240);
+  row-gap: 5px;
+}
+.grid-item {
+  background-color: rgb(226, 212, 231);
+  border: 1px solid rgb(183, 178, 485);
+  font-size: 30px;
+  text-align: center;
+  width: 180px;
+  padding: -10px;
+  border-radius: 5%;
+}
+.buttonAdd{
+  background-color:rgb(175, 129, 221);
+  border: none;
+  margin-left: 55%;
+  margin-bottom: 25px;
+  font-size: 32px;
+  font-family: Corinthia;
+  text-decoration: none;
+  display: inline-block;
+}
+.buttonAction {
+  width: auto;
+  height: auto;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(175, 129, 221);
+  border: none;
+}
+small {
+  border: 2px solid #777;
+  border-radius: 7px;
+  padding: 5px 12px;
+  color: #777;
+}
+.pagination {
+  align-items: center;
+  margin-left: 40%;
+}
+.paginationItem {
+  background-color: rgb(183, 178, 185);
+  border: 2px solid #666;
+  padding: 10px 15px;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.paginationItem span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.prev,
+.next {
+  background-color: rgb(183, 178, 185);
+  border: none;
+  padding: 10px;
+  color:#639;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.paginationItem.active {
+  border: 1px solid #888;
+  background-color: rgb(236, 226, 240);
+  pointer-events: none;
+}
+.prev.disabled,
+.next.disabled {
+  pointer-events: none;
+  box-shadow: none;
+  background-color: rgb(236, 226, 240);
+}
+@font-face {
+  font-family: 'Corinthia';
+  src: local('Corinthia'), url(./fonts/Corinthia/Corinthia-Regular.ttf) format('truetype');
+  font-size: 22;
+}
+.viewDisplay {
+  font-size: 40px;
+  font-family: Corinthia;
+  text-align: center;
+}
+@media only screen and (max-width: 1500px) {
+  .title{
+    position: relative;
+    align-items: center;
+  }
+  .grid-container {
+    align-items: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    background-color: rgb(236, 226, 240);
+    column-gap: 2px;
+    row-gap: 12px;
+  }
+  .pagination {
+    align-items: center;
+  }
+  .buttonAdd{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .title{
+    position: relative;
+    align-items: center;
+  }
+  .grid-container {
+    align-items: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: rgb(236, 226, 240);
+    column-gap: 2px;
+    row-gap: 12px;
+  }
+  .pagination {
+    align-items: center;
+    margin-left: 30%;
+  }
+
+}
+@media only screen and (max-width: 950px) {
+  .title{
+    position: relative;
+    align-items: center;
+  }
+  .grid-container {
+    align-items: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    background-color: rgb(236, 226, 240);
+    column-gap: 2px;
+    row-gap: 12px;
+    margin-left: 10%;
+  }
+
+  .pagination {
+    align-items: center;
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .title{
+    position: relative;
+    align-items: center;
+  }
+  .grid-container {
+    align-items: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgb(236, 226, 240);
+    column-gap: 2px;
+    row-gap: 12px;
+    margin-left: 10%;
+  }
+  .pagination {
+    align-items: center;
+    margin-left: 6%;
+  }
+  .buttonAdd{
+    display: none;
+  }
+}
+@media only screen and (max-width: 330px) {
+
+  .grid-container {
+    align-items: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgb(236, 226, 240);
+    column-gap: 2px;
+    row-gap: 12px;
+    margin-left: 2%;
+  }
+  .grid-item {
+    background-color: rgb(226, 212, 231);
+    border: 1px solid rgb(183, 178, 485);
+    font-size: 30px;
+    text-align: center;
+    width: 150px;
+    padding: -10px;
+    border-radius: 5%;
+  }
+  .buttonAdd{
+    display: grid;
+  }
+}
