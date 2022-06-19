@@ -4,7 +4,11 @@
   display: block;
   border: #777;
 }
-
+.Title{
+  font-size: 55px;
+  font-weight: bold;
+  color:#639;
+}
 .grid-container {
   position: relative;
   align-items: center;
@@ -24,10 +28,9 @@
   border-radius: 5%;
 }
 .scrollable {
-  background-color: #f1f1f1;
-  height: 250px;
+  background-color: white;
+  height: 400px;
   overflow-y:scroll;
-  margin: 20px;
   text-align: center;
 }
 .buttonAdd{

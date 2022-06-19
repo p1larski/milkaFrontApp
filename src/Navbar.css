@@ -5,8 +5,9 @@
   }
   
   .viewDisplay {
-    font-size: 40px;
+    font-size: 90px;
     font-family: Corinthia;
+    color: #639;
   }
    
   .Navbar {
@@ -21,26 +22,12 @@
   }
 
   .Navfoto{
-    height: 700px;
+    height: 400px;
+    margin-top: 22%;
+    font-size: 90px;
+    color:white;
   }
-  .Title{
-    font-size: 60px;
-    font-weight: bold;
-    color:#639;
-  }
-  .Navbar .leftSide {
-    flex: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-    
-  .ButtonComp{
-    background-color: rgb(183, 178, 185);
-    border: none;
-    color:#639;
-    font-size: 60px;
-}
+ 
   @media only screen and (max-width: 850px) {
     .Navbar .leftSide .links a {
       font-size: 30px;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import Button from './ScrollToTop';
 const mapStyles = {
   width: '800px',
   height: '500px',

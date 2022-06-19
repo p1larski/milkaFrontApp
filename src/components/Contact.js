@@ -11,7 +11,7 @@ function Contact () {
                 <div className='Contact'>
                     Zapraszam do kontaktu:
                     <li>Telefon: 31241231</li>
-                    <li>Instagram: @Milkastylizuje</li>
+                    <li>Instagram: @BeBeauty</li>
                 </div>
         </div>
 
