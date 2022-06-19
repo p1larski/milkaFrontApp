@@ -23,6 +23,13 @@
   padding: -10px;
   border-radius: 5%;
 }
+.scrollable {
+  background-color: #f1f1f1;
+  height: 250px;
+  overflow-y:scroll;
+  margin: 20px;
+  text-align: center;
+}
 .buttonAdd{
   background-color:rgb(175, 129, 221);
   border: none;
@@ -70,7 +77,7 @@ small {
 }
 .prev,
 .next {
-  background-color: rgb(183, 178, 185);
+  background-color: rgb(236, 226, 240);
   border: none;
   padding: 10px;
   color:#639;
@@ -115,9 +122,9 @@ small {
   .pagination {
     align-items: center;
   }
-  .buttonAdd{
+  /* .buttonAdd{
     display: none;
-  }
+  } */
 }
 
 @media only screen and (max-width: 1200px) {
@@ -138,7 +145,6 @@ small {
     align-items: center;
     margin-left: 30%;
   }
-
 }
 @media only screen and (max-width: 950px) {
   .title{
@@ -185,7 +191,6 @@ small {
   }
 }
 @media only screen and (max-width: 330px) {
-
   .grid-container {
     align-items: center;
     width: auto;
