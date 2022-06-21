@@ -19,6 +19,10 @@ const Employee = () => {
     const [ViewHours, SetViewHours] = useState(false);
     const handleHoursShow = () => { SetViewHours(true) };
     const handleHoursClose = () => { SetViewHours(false) };
+    //FOr apply changes
+    const [ViewClose, SetViewClose] = useState(false);
+    const handleCloseShow = () => { SetViewClose(true) };
+    const handleCloseClose = () => { SetViewClose(false) };
     //FOr Add New Data Model
     const [ViewPost, SetPostShow] = useState(false);
     const handlePostShow = () => { SetPostShow(true) };
@@ -71,34 +75,34 @@ const Employee = () => {
       ];
 
       const hours = [{ 
-        value: 7, label: '7:00' },
-      { value: 7.5, label: '7:30' },
-      { value: 8, label: '8:00' },
-      { value: 8.5, label: '8:30' },
-      { value: 9, label: '9:00' },
-      { value: 9.5, label: '9:30' },
-      { value: 10, label: '10:00' },
-      { value: 10.5, label: '10:30' },
-      { value: 11, label: '11:00' },
-      { value: 11.5, label: '11:30' },
-      { value: 12, label: '12:00' },
-      { value: 12.5, label: '12:30' },
-      { value: 13, label: '13:00' },
-      { value: 13.5, label: '13:30' },
-      { value: 14, label: '14:00' },
-      { value: 14.5, label: '14:30' },
-      { value: 15, label: '15:00' },
-      { value: 15.5, label: '15:30' },
-      { value: 16, label: '16:00' },
-      { value: 16.5, label: '16:30' },
-      { value: 17, label: '17:00' },
-      { value: 17.5, label: '17:30' },
-      { value: 18, label: '18:00' },
-      { value: 18.5, label: '18:30' },
-      { value: 19, label: '19:00' },
-      { value: 19.5, label: '19:30' },
-      { value: 20, label: '20:00' },
-      { value: 20.5, label: '20:30' }
+        value: "07:00", label: '7:00' },
+      { value: "07:30", label: '7:30' },
+      { value: '08:00', label: '8:00' },
+      { value: '08:30', label: '8:30' },
+      { value: '09:00', label: '9:00' },
+      { value: '09:30', label: '9:30' },
+      { value: '10:00', label: '10:00' },
+      { value: '10:30', label: '10:30' },
+      { value: '11:00', label: '11:00' },
+      { value: '11:30', label: '11:30' },
+      { value: '12:00', label: '12:00' },
+      { value: '12:30', label: '12:30' },
+      { value: '13:00', label: '13:00' },
+      { value: '13:30', label: '13:30' },
+      { value: '14:00', label: '14:00' },
+      { value: '14:30', label: '14:30' },
+      { value: '15:00', label: '15:00' },
+      { value: '15:30', label: '15:30' },
+      { value: '16:00', label: '16:00' },
+      { value: '16:30', label: '16:30' },
+      { value: '17:00', label: '17:00' },
+      { value: '17:30', label: '17:30' },
+      { value: '18:00', label: '18:00' },
+      { value: '18:30', label: '18:30' },
+      { value: '19:00', label: '19:00' },
+      { value: '19:30', label: '19:30' },
+      { value: '20:00', label: '20:00' },
+      { value: '20:30', label: '20:30' }
     ];
 
     //handle Delete Function 
@@ -126,7 +130,7 @@ const Employee = () => {
     //handle Edit Function 
     const handleEdit = () =>{
         const url = `http://localhost:8080/day/${id}`
-        const Credentials = { hourStartDay, hourEndDay }
+        const Credentials = {hourStartDay, hourEndDay }
         axios.put(url, Credentials)
     }
     //handle Delete Function 
@@ -158,8 +162,8 @@ const Employee = () => {
                             {days.map(day => 
                             <div className='grid-item' key = {day.id}>
                                     <a style={{color: '#639'}}>{day.date}</a>
-                                    <p>Otwarcie: {day.hoursSet[0]}</p>
-                                    <p>Zamknięcie: {day.hoursSet[day.hoursSet.length-1]}</p>
+                                    <p>Otwarcie: {day.hourStartDay}</p>
+                                    <p>Zamknięcie: {day.hourEndDay}</p>
                                     <Button className='buttonAction' 
                                             variant='secondary'
                                             onClick={() => {handleViewShow(
@@ -284,10 +288,11 @@ const Employee = () => {
                         </div>
                     <Modal.Body>
                         <div className='viewDisplay'>
-                                    <label>Otwarcie:</label> 
+                                    <label>Pierwsza wizyta:</label> 
                             <p style={{color: "rgb(133, 38, 120)"}}>{hoursOfDay[0]}</p>
-                                    <label>Zamknięcie:</label>  
+                                    <label>Ostatnia wizyta :</label>  
                             <p style={{color: "rgb(133, 38, 120)"}}>{hoursOfDay[hoursOfDay.length-1]}</p>
+                            
                                     <div className='form-group mt-3'>
                                             <Button className='buttonAction' 
                                                     variant='secondary' 
@@ -422,7 +427,7 @@ const Employee = () => {
                             
                             <Button type='secondary' 
                                     className='buttonAction' 
-                                    onClick={() => {handleEdit(); hanldeEditClose(); GetEmployeeData()}}>
+                                    onClick={() => {handleEdit(); handleCloseShow()}}>
                                         Zatwierdź zmiany
                             </Button>
                         </div>
@@ -491,7 +496,7 @@ const Employee = () => {
                                         onChange={(hairdressing) => setHairDresEnum(hairdressing.value)} 
                                         placeholder="Dostępne zabiegi"/>
                                 <Select options={hourSelect} 
-                                        onChange={(hourSelect) => setHourStartVisit(hourSelect.value)} 
+                                        onChange={(hourSelect) => {setHourStartVisit(hourSelect.value); console.log("tukej z guzika")}} 
                                         placeholder="Godzina wizyty"/>
                             </div>
                                 <Button type='submit' 
@@ -500,6 +505,27 @@ const Employee = () => {
                                                         handleReservationClose(); 
                                                         GetEmployeeData()}}>Dodaj
                                 </Button>
+                        </div>
+                    </Modal.Body>
+                </Modal>
+                <Modal show={ViewClose}
+                        onHide={handleCloseClose}
+                        backdrop="static"
+                        keyboard={false}
+                        scrollable = {true}>   
+                    
+                                
+                        
+                    <Modal.Body>
+                        <div className='viewDisplay'>
+                            <h1>Zmiany zapisane!</h1>
+                            <div className='scrollable'>
+                            <Button variant='secondary'
+                                        className='buttonAction' 
+                                        onClick={() => {handleCloseClose(); GetEmployeeData()}}>
+                                                        Zamknij
+                                </Button>   
+                            </div>
                         </div>
                     </Modal.Body>
                 </Modal>
