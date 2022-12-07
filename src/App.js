@@ -11,7 +11,7 @@ import Gallery from './components/Gallery';
 export default function App(){
   return (
     <div className='Global'> 
-                <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Navbar />} />
@@ -20,17 +20,7 @@ export default function App(){
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-    </BrowserRouter>
-      {/* <div className='SecondPage'>
-                <Employee/>
-      </div> 
-      <div>
-                <Contact/>
-      </div>
-      <div className='ButtonTop'>
-                <Button/>
-      </div> */}
-      
+    </BrowserRouter> 
     </div>
   )
 };

@@ -39,7 +39,7 @@
   margin-left: 55%;
   margin-bottom: 25px;
   font-size: 32px;
-  font-family: Corinthia;
+  font-family: Papyrus;
   text-decoration: none;
   display: inline-block;
 }
@@ -47,7 +47,7 @@
   width: auto;
   height: auto;
   font-size: 12px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Papyrus;
   background-color: rgb(175, 129, 221);
   border: none;
 }
@@ -98,14 +98,9 @@ small {
   box-shadow: none;
   background-color: rgb(236, 226, 240);
 }
-@font-face {
-  font-family: 'Corinthia';
-  src: local('Corinthia'), url(./fonts/Corinthia/Corinthia-Regular.ttf) format('truetype');
-  font-size: 22;
-}
 .viewDisplay {
   font-size: 40px;
-  font-family: Corinthia;
+  font-family: Papyrus;
   text-align: center;
 }
 @media only screen and (max-width: 1500px) {
@@ -125,9 +120,6 @@ small {
   .pagination {
     align-items: center;
   }
-  /* .buttonAdd{
-    display: none;
-  } */
 }
 
 @media only screen and (max-width: 1200px) {

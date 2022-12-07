@@ -9,7 +9,7 @@ export default function Navbar() {
                 .
             <div className="Navfoto">
             Witaj na stronie salonu
-            <p>BeBeauty</p>
+            <p>@Milkastylizuje</p>
             </div>
         </div>
   </div>

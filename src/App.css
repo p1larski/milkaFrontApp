@@ -3,7 +3,7 @@ body{
 }
 .Global{
   font-size: 40px;
-  font-family: Corinthia;
+  font-family: Papyrus;
   text-align: center;
   width: auto;
 }
@@ -17,6 +17,10 @@ body{
 .Link{
   color: #639;
   text-decoration: none;
+}
+.menuk{
+  height: 200px;
+  width: 200px;
 }
 @font-face {
   font-family: 'Corinthia';

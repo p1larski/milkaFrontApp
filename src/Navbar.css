@@ -1,19 +1,14 @@
-   @font-face {
-    font-family: 'Corinthia';
-    src: local('Corinthia'), url(./fonts/Corinthia/Corinthia-Regular.ttf) format('truetype');
-    font-size: 22;
-  }
-  
+    
   .viewDisplay {
     font-size: 90px;
-    font-family: Corinthia;
+    font-family: Papyrus;
     color: #639;
   }
    
   .Navbar {
     width: 100%;
     height: 100%;
-    font-family: Corinthia;
+    font-family: Papyrus;
     align-items: flex-start;
     background: url(./images/WelcomePhoto.jpg);  
     background-position: center;   
@@ -23,8 +18,9 @@
 
   .Navfoto{
     height: 400px;
-    margin-top: 22%;
+    margin-top: 18%;
     font-size: 90px;
+    font-family: Papyrus;
     color:white;
   }
  
